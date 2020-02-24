@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Faces = props => {
 	const { click } = props;
+
 	return (
 		<div>
 			<button onClick={click} name="sad">
@@ -21,6 +23,10 @@ const Faces = props => {
 			</button>
 		</div>
 	);
+};
+
+Faces.propTypes = {
+	click: PropTypes.func
 };
 
 export default Faces;

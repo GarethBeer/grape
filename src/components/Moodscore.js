@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MoodScore = props => {
 	const { message } = props;
@@ -10,6 +11,9 @@ const MoodScore = props => {
 			<textarea type="text" onChange={message} />
 		</div>
 	);
+};
+MoodScore.propTypes = {
+	message: PropTypes.func
 };
 
 export default MoodScore;

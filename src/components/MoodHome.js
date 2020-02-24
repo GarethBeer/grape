@@ -36,7 +36,7 @@ class MoodHome extends Component {
 	};
 
 	clickHandler = event => {
-		event.preventDefault();
+		console.log(event);
 		this.setState({
 			moods: {
 				...this.state.moods,
@@ -56,7 +56,10 @@ class MoodHome extends Component {
 				<h2>MoodHome</h2>
 
 				{this.state.score ? (
-					<MoodScore message={this.onChangeHandler} />
+					<MoodScore
+						message={this.onChangeHandler}
+						badwords={this.state.badWords}
+					/>
 				) : (
 					<Faces state={this.state} click={this.clickHandler} />
 				)}
